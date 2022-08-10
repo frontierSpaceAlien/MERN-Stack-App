@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd mern-stack-app-frontend && npm run build",
     "install-client": "cd mern-stack-app-frontend && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build"
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node app.js",
+    "client": "cd frontend && npm start",
+    "app": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
