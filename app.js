@@ -23,6 +23,10 @@ app.get('/', (req, res) => res.send('Hello world!'));
 // use Routes
 app.use('/api/books', books);
 
-const port = process.env.PORT || 8082;
+const port = process.env.PORT || 5000;
+
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static('mern-stack-app-frontend/build'));
+}
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
