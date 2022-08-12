@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import CreateBook from './components/CreateBook';
@@ -12,12 +12,12 @@ class App extends Component {
     return (
       <Router>
         <div>
-        <Routes>
-            <Route exact path='/' element={<ShowBookList/>} />
-            <Route path='/create-book' element={<CreateBook/>} />
-            <Route path='/edit-book/:id' element={<UpdateBookInfo/>} />
-            <Route path='/show-book/:id' element={<ShowBookDetails/>} />
-        </Routes>
+          <Routes>
+            <Route exact path="/" element={<ShowBookList />} />
+            <Route path="/create-book" element={<CreateBook />} />
+            <Route path="/edit-book/:id" element={<UpdateBookInfo />} />
+            <Route path="/show-book/:id" element={<ShowBookDetails />} />
+          </Routes>
         </div>
       </Router>
     );
