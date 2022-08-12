@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - uses: frontierSpaceAlien/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API}}
           heroku_app_name: "ense701mernapp" #Must be unique in Heroku
           heroku_email: "yxx6616@autuni.ac.nz"
-          appdir: "backend" # <- This will point to the api folder in your project
